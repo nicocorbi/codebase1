@@ -1,0 +1,64 @@
+{
+    "productos": 
+    [
+        {
+            "camisetas": "nike",
+            "precio(en euros)": 20,
+            "cantidad en stock": 100
+        },
+        {
+            "pantalones": "nike",
+            "precio(en euros)": 15,
+            "cantidad en stock": 100
+        },
+        {
+             "sudaderas":"adidas",
+             "precio(en euros)":30,
+             "cantidad en stock":100 
+        }
+    ],
+
+
+     "secciones":[
+    {
+      "ropadecolor":"colores frios",
+      "cantidadproductos":150
+      
+
+    },
+    {
+      "ropadecolor":"colores palidos",
+      "cantidadproductos":150
+      
+    }
+  ],
+    "usuarios":[
+    {
+      "id":1,
+      "nombre":"pepe",
+      "mensaje":"quiero comprar 2 camisetas"
+
+    },
+    {
+      "id":2,
+      "nombre":"maria",
+      "mensaje":"esta buscando un pantalon"
+    }
+  ],
+    "pedidos":[
+    {
+      "producto":"camisetas",
+      "cantidadcomprada":2,
+      "preciofinal":40,
+      "comprador":"pepe"
+      
+
+    },
+    {
+      "producto":"pantalon",
+      "cantidadcomprada":1,
+      "preciofinal":15,
+      "comprador":"maria"
+    }
+  ]
+}

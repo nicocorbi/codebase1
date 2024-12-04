@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+     <form onchange="myFunction()">
+        <input type="text" placeholder = "usuario" id = "inputTexto">
+        <input type = "checkbox">
+        <input type = "color">
+        <input type="password" placeholder = "contraseña">
+        <input type="date">
+        <input type="month">
+        </form>
+        <div id = "contenedor">
+            
+
+        </div>
+        <script>
+            function myFunction()
+            {
+                console.log("el usuario cambio algo")
+                const inputTexto = document.querySelector("#inputTexto")
+                const valor = inputTexto.value
+                const contenedor = document.querySelector("#contenedor")
+                const ptexto = document.createElement("p")
+                pTexto.innerText = valor
+                contenedor.appendChild(pTexto)
+                
+            }
+        </script>
+</body>
+</html>
