@@ -14,4 +14,3 @@ import io
 from PIL import Image
 image = Image.open(io.BytesIO(image_bytes))
 image.save("plane.png")
-e
