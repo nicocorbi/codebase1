@@ -43,7 +43,7 @@ fetch('https://dummyjson.com/recipes/1')
         const imagenElemento = document.createElement("img");
         imagenElemento.src = data.image;
         imagenElemento.alt = `Imagen de la receta ${nombre}`;
-        imagenElemento.style.width = "50%";
+       
         document.body.appendChild(imagenElemento);
 
         // Tiempo de preparación
