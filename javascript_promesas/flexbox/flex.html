@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            margin: 2px; /* Espaciado entre los recuadros */
+        }
+        .rojo {
+            background: red;
+        }
+        .verde {
+            background: green;
+        }
+        .amarillo {
+            background: yellow;
+        }
+        .azul {
+            background: blue;
+        }
+        .rosa {
+            background: violet;
+        }
+
+        body{
+            height: 100vh;
+            display:flex;
+            flex-direction: column;
+           
+            flex-wrap: nowrap;
+            justify-content: flex;
+            justify-content: center;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="rosa"></div>
+    <script>
+        // Lista de clases de colores
+        const colors = ["rojo", "verde", "amarillo", "azul"];
+        
+        // Crear y agregar 100 elementos div con un color aleatorio
+        for (let i = 0; i < 3; i++) {
+            const div = document.createElement("div");
+            // Seleccionar un color aleatorio de la lista
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            div.className = randomColor; 
+            document.body.appendChild(div);
+        }
+    </script>
+</body>
+</html>

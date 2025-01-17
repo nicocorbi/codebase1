@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemones</title>
+</head>
+<body>
+    <script>
+        /*
+        const promesaFetch = fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+        console.log(promesaFetch)
+        const promesaJSON = promesaFetch.then(data => data.json())
+        console.log(promesaJSON)
+        promesaJSON.then(pokemon => console.log(pokemon))
+        */
+
+        fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+        .then(data => data.json())
+        .then(pokemons => {
+            // Recorrer la lista de Pokémon y crear un div para cada uno
+            pokemons.results.forEach(pokemon => {
+                // Hacer una nueva solicitud para obtener los detalles de cada Pokémon (incluyendo su imagen)
+                fetch(pokemon.url)
+                .then(response => response.json())
+                .then(pokemonDetails => {
+                    // Crear un nuevo elemento div
+                    const div = document.createElement("div");
+                    div.className = "pokemon";
+                    
+                    // Crear un nuevo elemento de imagen
+                    const img = document.createElement("img");
+                    img.src = pokemonDetails.sprites.front_default; // Obtener la URL de la imagen
+                    img.alt = pokemonDetails.name; // Añadir un texto alternativo con el nombre del Pokémon
+                    
+                    // Crear un texto con el nombre del Pokémon
+                    const name = document.createElement("p");
+                    name.textContent = pokemonDetails.name; // Nombre del Pokémon
+                    
+                    // Agregar la imagen y el nombre al div
+                    div.appendChild(img);
+                    div.appendChild(name);
+                    
+                    // Agregar el div al body
+                    document.body.appendChild(div);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
