@@ -23,24 +23,24 @@
                 fetch(pokemon.url)
                 .then(response => response.json())
                 .then(pokemonDetails => {
-                    // Crear un nuevo elemento div
+                    
                     const div = document.createElement("div");
                     div.className = "pokemon";
                     
-                    // Crear un nuevo elemento de imagen
+                    
                     const img = document.createElement("img");
                     img.src = pokemonDetails.sprites.front_default; 
                     img.alt = pokemonDetails.name; 
                     
-                    // Crear un texto con el nombre del Pokémon
+                   
                     const name = document.createElement("p");
-                    name.textContent = pokemonDetails.name; // Nombre del Pokémon
+                    name.textContent = pokemonDetails.name; 
                     
-                    // Agregar la imagen y el nombre al div
+                    
                     div.appendChild(img);
                     div.appendChild(name);
                     
-                    // Agregar el div al body
+                    
                     document.body.appendChild(div);
                 });
             });
