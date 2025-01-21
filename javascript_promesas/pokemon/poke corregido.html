@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemones</title>
+</head>
+<body>
+    <ul></ul>
+    <script>
+        const lista = document.querySelector("ul");
+        fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+            .then(data => data.json())
+            .then(pokemons => {
+                const listaPokemons = pokemons.results;
+                for (let i = 0; i < listaPokemons.length; i++) {
+                    const nombrePokemon = listaPokemons[i].name;
+                    const elementoNombre = document.createElement("li");
+                    elementoNombre.textContent = nombrePokemon;
+                    lista.appendChild(elementoNombre);
+
+                    const url = listaPokemons[i].url; // URL para obtener detalles del Pokémon
+                    fetch(url)
+                        .then(data => data.json())
+                        .then(pokemon => {
+                            const sprite = pokemon.sprites.front_default; // Obtén la URL del sprite
+                            if (sprite) {
+                                const img = document.createElement("img");
+                                img.src = sprite; // Asigna la URL del sprite como fuente de la imagen
+                                img.alt = nombrePokemon; // Agrega un texto alternativo
+                                elementoNombre.appendChild(img); // Agrega la imagen al <li>
+                            }
+                        });
+                }
+            });
+    </script>
+</body>
+</html>
+

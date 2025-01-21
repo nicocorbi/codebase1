@@ -25,22 +25,14 @@
                 .then(pokemonDetails => {
                     
                     const div = document.createElement("div");
-                    div.className = "pokemon";
-                    
-                    
+                    div.className = "pokemon";                   
                     const img = document.createElement("img");
                     img.src = pokemonDetails.sprites.front_default; 
-                    img.alt = pokemonDetails.name; 
-                    
-                   
+                    img.alt = pokemonDetails.name;                   
                     const name = document.createElement("p");
-                    name.textContent = pokemonDetails.name; 
-                    
-                    
+                    name.textContent = pokemonDetails.name;                    
                     div.appendChild(img);
-                    div.appendChild(name);
-                    
-                    
+                    div.appendChild(name);                  
                     document.body.appendChild(div);
                 });
             });
