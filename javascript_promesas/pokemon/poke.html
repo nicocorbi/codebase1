@@ -18,9 +18,8 @@
         fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
         .then(data => data.json())
         .then(pokemons => {
-            // Recorrer la lista de Pokémon y crear un div para cada uno
+           
             pokemons.results.forEach(pokemon => {
-                // Hacer una nueva solicitud para obtener los detalles de cada Pokémon (incluyendo su imagen)
                 fetch(pokemon.url)
                 .then(response => response.json())
                 .then(pokemonDetails => {
@@ -30,8 +29,8 @@
                     
                     // Crear un nuevo elemento de imagen
                     const img = document.createElement("img");
-                    img.src = pokemonDetails.sprites.front_default; // Obtener la URL de la imagen
-                    img.alt = pokemonDetails.name; // Añadir un texto alternativo con el nombre del Pokémon
+                    img.src = pokemonDetails.sprites.front_default; 
+                    img.alt = pokemonDetails.name; 
                     
                     // Crear un texto con el nombre del Pokémon
                     const name = document.createElement("p");
