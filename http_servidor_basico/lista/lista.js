@@ -45,3 +45,4 @@ const users = [
   document.body.appendChild(table)
   // aislar el codigo que hemos creado , una funcion en javascript 
   // que dado una array de un objeto lo haga en la tabla.(es decir,ponerlo en una funcion)
+  //codepen.io
