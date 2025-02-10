@@ -17,4 +17,4 @@ def add_task(title,status,desc=None):
 #funcion delete_tasks
 
 ##hacer para el proximo dia un diagrama desde marmaid usando estas 
-# tabla y implementa las 3 funciones
+# tablas y implementa las 3 funciones
