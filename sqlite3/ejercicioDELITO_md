@@ -1,0 +1,7 @@
+SELECT * FROM crime_scene WHERE location = "Blue Note Lounge";
+76	19851120	theft	Blue Note Lounge	A briefcase containing sensitive documents vanished. A witness reported a man in a trench coat with a scar on his left cheek fleeing the scene.
+SELECT * FROM suspects WHERE attire = "trench coat" AND scar = "left cheek";
+3	Frankie Lombardi	trench coat	left cheek
+183	Vincent Malone	trench coat	left cheek
+SELECT * FROM interviews WHERE suspect_id = 183;
+183	I wasn’t going to steal it, but I did.
