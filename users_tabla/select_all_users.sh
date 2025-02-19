@@ -1,1 +1,1 @@
-sqlite3 $1 "SELECT * FROM $2";
+sqlite3 $1 "SELECT * FROM $2" > resultado;
