@@ -98,3 +98,7 @@ erDiagram
     USERS ||--o{ TASKS : asign
     ehjfufdfguj
 ```
+# apendchild
+ te permite añadir algo nuevo dentro de otro elemento en una página web.
+ El querySelector es como un súper buscador que encuentra un elemento en la página por su id, clase, o alguna otra característica que tú le digas
+ el create element te permite crear un nuevo "bloque" o "etiqueta" en la página web sin tener que escribirlo directamente en el código HTML.
