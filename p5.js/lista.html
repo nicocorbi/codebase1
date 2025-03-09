@@ -35,17 +35,21 @@
             const tr = document.createElement("tr")
             const td1 = document.createElement("td")
             const td2= document.createElement("td")
-            tr.appendChild(td1)
+            tr.appendChild(td1)// appendChild es como decirle a tu página web: "¡Pon este nuevo bloque dentro de la caja!"
             tr.appendChild(td2)
-            td1.innerText = x
+            td1.innerText = x // es lo que te permite leer o cambiar ese texto.
             td2.innerText = y
-            const table = document.querySelector("table")
+            const table = document.querySelector("table")//El querySelector es como un súper buscador que encuentra un elemento en la página por su id, clase, o alguna otra característica que tú le digas.
             table.appendChild(tr)
-            
-
+            // El código que compartiste crea una nueva fila (<tr>) y dentro de ella, agrega dos celdas (<td>), cada una con un número aleatorio.
+                //Genera dos números aleatorios (en las variables x y y).
+                //Crea una nueva fila (<tr>) con dos celdas (<td>).
+                //Pone los números aleatorios en las celdas de la fila.
+                //Agrega la nueva fila a una tabla existente en la página web.
 
 
         }
     </script>
 </body>
 </html>
+
