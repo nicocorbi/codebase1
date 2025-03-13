@@ -1,13 +1,14 @@
--- database.sql
-CREATE TABLE IF NOT EXISTS pacientes (
+-- Crear la tabla de pacientes
+CREATE TABLE pacientes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nombre TEXT NOT NULL,
     edad INTEGER NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS mediciones (
+-- Crear la tabla de mediciones EEG
+CREATE TABLE mediciones (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    paciente_id INTEGER NOT NULL,
+    paciente_id INTEGER,
     delta REAL,
     theta REAL,
     alpha REAL,
@@ -15,6 +16,6 @@ CREATE TABLE IF NOT EXISTS mediciones (
     gamma REAL,
     amplitud REAL,
     notas TEXT,
-    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (paciente_id) REFERENCES pacientes (id) ON DELETE CASCADE
+    fecha TEXT,
+    FOREIGN KEY(paciente_id) REFERENCES pacientes(id)
 );
