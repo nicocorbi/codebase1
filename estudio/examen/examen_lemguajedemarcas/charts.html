@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="mediciones">
+        <h2>Tiempo:0</h2>
+        <p>Valor: 12</p>
+    </section>
+    <script>
+        let datos = [
+            {tiempo: 0, valor: 12},
+            {tiempo: 1, valor: 15},
+            {tiempo: 2, valor: 18},
+            {tiempo: 3, valor: 21},
+            {tiempo: 4, valor: 24},
+            {tiempo: 5, valor: 27},
+            {tiempo: 6, valor: 30},
+            {tiempo: 7, valor: 33},
+            {tiempo: 8, valor: 36},
+            {tiempo: 9, valor: 39}
+
+        ]
+        const contenedormediciones = document.getElementById('mediciones');
+        for (let i=0; i<datos.length; i++){
+
+            console.log(datos[i].tiempo);
+            console.log(datos[i].valor);
+          
+
+            console.log("------------")
+
+        }
+        datos.forEach (datos => {
+            console.log(datos[i].tiempo);
+            console.log(datos[i].valor);
+            const h2 = document.createElement('h2');
+            const p = document.createElement('p');
+            h2.innerText = `Tiempo: ${datos.tiempo}`;
+            p.innerText = `Valores: ${datos.valor}`;
+            console.log("------------")
+            contenedormediciones.appendChild(h2);
+            contenedormediciones.appendChild(p);
+
+        })
+    </script>
+</body>
+</html>

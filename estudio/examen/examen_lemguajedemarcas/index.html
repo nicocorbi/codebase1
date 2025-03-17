@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch(`/vinos`)
+        .then(response => response.json)
+        then(data => {
+            console.log(data);
+            console.log(data[0]);
+            const keys = Object.keys(data[0]);
+            console.log(keys)
+
+            for(let i=0; i < data.lenght; i++){
+                console.log(data[i].nombre)
+            }
+            data.forEach(vino =>{
+                console.log(vino.keys());
+            })
+        })
+        .catch(error => console.log(error))
+    </script>
+</body>
+</html>
